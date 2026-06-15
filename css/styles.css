@@ -234,7 +234,7 @@ body {
 }
 .site-nav {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   padding: 20px 48px;
   background: transparent;
@@ -984,13 +984,13 @@ a.services__card--link:hover {
     padding: 16px 20px;
   }
   .site-nav__links {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
   }
   .site-nav__links a {
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 11px;
+    letter-spacing: 0.04em;
   }
 }
 
