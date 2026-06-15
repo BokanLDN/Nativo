@@ -1,0 +1,447 @@
+/* ── Nativo · Walking — D · Combined ─────────────────────────── */
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body: background wk.bg, color wk.ink, fontFamily wk.sans */
+body.wk-page {
+  background: #ebe6dc;
+  margin: 0;
+}
+
+/* nav text colours on light page */
+.site-nav__logo {
+  color: #2c2a25;
+}
+.site-nav__links a {
+  color: #2c2a25;
+}
+.site-nav__links a:hover {
+  color: rgba(44, 42, 37, 0.6);
+}
+
+/* ── Section: padding 96px 56px ─────────────────────────────── */
+.wk-section {
+  padding: 96px 56px;
+}
+
+/* ── WkPlaceholder ───────────────────────────────────────────── */
+.wk-ph {
+  position: relative;
+  overflow: hidden;
+}
+
+.wk-ph__stripe {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0 2px,
+    transparent 2px 8px
+  );
+  z-index: 1;
+}
+
+.wk-ph__label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  z-index: 2;
+  font-family: "Satoshi", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* shape="soft" → borderRadius 20px */
+.wk-ph--soft {
+  border-radius: 20px;
+}
+
+/* shape="arch" → borderRadius 999px 999px 16px 16px */
+.wk-ph--arch {
+  border-radius: 999px 999px 16px 16px;
+}
+
+/* tone gradients */
+.wk-ph--sage {
+  background: linear-gradient(160deg, #cbd0bd 0%, #aeb89a 60%, #7a8a6e 100%);
+}
+.wk-ph--clay {
+  background: linear-gradient(160deg, #e3cdb6 0%, #cfae8e 60%, #b85c3c 100%);
+}
+.wk-ph--cream {
+  background: linear-gradient(160deg, #ece4d2 0%, #dccfb4 60%, #a89674 100%);
+}
+.wk-ph--moss {
+  background: linear-gradient(160deg, #a4b59a 0%, #7d9077 60%, #4d5e48 100%);
+}
+
+/* ── Shared typography ───────────────────────────────────────── */
+/* eyebrow: fontSize 12, letterSpacing 0.22em, uppercase, color wk.sageDark, marginBottom 18 */
+.wk-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #56664c;
+  margin-bottom: 18px;
+}
+
+/* smaller eyebrow variant: letterSpacing 0.22em, marginBottom 12 */
+.wk-eyebrow--sm {
+  margin-bottom: 12px;
+}
+
+/* tag: fontSize 12, letterSpacing 0.18em, uppercase, color sageDark, marginBottom 12 */
+.wk-tag {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #56664c;
+  margin-bottom: 12px;
+}
+
+/* smaller tag variant: fontSize 11, letterSpacing 0.18em, marginBottom 8 */
+.wk-tag--sm {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+/* ── Hero card ───────────────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 48px, background wk.card, borderRadius 32 */
+/* padding 64px 56px, grid 1.2fr 1fr, gap 48, alignItems center */
+.wk-hero {
+  max-width: 1280px;
+  margin: 0 auto 48px;
+  padding: 64px 56px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* h1: wk.serif, fontSize 64, lineHeight 1.0, fontWeight 400, letterSpacing -0.02em */
+.wk-hero__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 64px;
+  line-height: 1;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #2c2a25;
+}
+
+.wk-hero__title em {
+  color: #6a1900;
+  font-style: italic;
+}
+
+/* lede: fontSize 17, lineHeight 1.65, color inkSoft, marginTop 22, maxWidth 520 */
+.wk-hero__lede {
+  margin-top: 22px;
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+/* hero photo: ratio 4/5 */
+.wk-hero__photo {
+  aspect-ratio: 4 / 5;
+}
+
+/* ── The walk itself ─────────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 48px */
+.wk-walk {
+  max-width: 1280px;
+  margin: 0 auto 48px;
+}
+
+/* walk photo: ratio 16/9 */
+.wk-walk__photo {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+/* walk text + after card: side by side, gap 32, alignItems flex-start */
+.wk-walk__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: flex-start;
+  margin-top: 32px;
+}
+
+/* walk text block */
+.wk-walk__text {
+  max-width: none;
+}
+
+/* walk title: wk.serif, fontSize 32, fontWeight 400, letterSpacing -0.01em, lineHeight 1.1 */
+.wk-walk__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: #2c2a25;
+}
+
+/* walk body: fontSize 16, lineHeight 1.7, color inkSoft, marginTop 18 */
+.wk-walk__body {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.wk-walk__body + .wk-walk__body {
+  margin-top: 14px;
+}
+
+/* after walk card: padding 24px 28px, background wk.card, borderRadius 18 */
+.wk-after {
+  padding: 24px 28px;
+  background: #f4efe5;
+  border-radius: 18px;
+}
+
+/* after walk text: wk.serif, fontSize 20, lineHeight 1.4 */
+.wk-after__text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+  color: var(--body-ink);
+}
+
+/* ── Where we walk ───────────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 48px */
+.wk-parks {
+  max-width: 1280px;
+  margin: 0 auto 48px;
+}
+
+/* header: flex, space-between, alignItems baseline */
+/* paddingBottom 20, borderBottom 1px solid rule, marginBottom 28 */
+.wk-parks__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cdc4b0;
+  margin-bottom: 28px;
+}
+
+/* title: wk.serif, fontSize 32, fontWeight 400, letterSpacing -0.01em */
+.wk-parks__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 32px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #2c2a25;
+}
+
+/* region: fontSize 12, letterSpacing 0.18em, uppercase, color sageDark */
+.wk-parks__region {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #56664c;
+}
+
+/* grid: repeat(4, 1fr), gap 18 */
+.wk-parks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* park photo: ratio 4/5 */
+.wk-park__photo {
+  aspect-ratio: 4 / 5;
+}
+
+/* park info: marginTop 12 */
+.wk-park__info {
+  margin-top: 12px;
+}
+
+/* park name: wk.serif, fontSize 22, fontWeight 400, letterSpacing -0.01em */
+.wk-park__name {
+  font-family: "Satoshi", sans-serif;
+  font-size: 22px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #2c2a25;
+}
+
+/* park tag: fontSize 11, letterSpacing 0.14em, uppercase, color sageDark, marginTop 4 */
+.wk-park__tag {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #56664c;
+  margin-top: 4px;
+}
+
+/* ── Small groups. Never a pack ──────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 32px, background wk.clayPale, borderRadius 28 */
+/* padding 40px 48px, grid 1fr 1fr, gap 40, alignItems center */
+.wk-groups {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+  background: #ffddcd78;
+  border-radius: 28px;
+  padding: 40px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* groups title: wk.serif, fontSize 30, fontWeight 400, letterSpacing -0.01em, lineHeight 1.15 */
+.wk-groups__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 30px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: #2c2a25;
+}
+
+.wk-groups__title em {
+  color: #6a1900;
+  font-style: italic;
+}
+
+/* groups body: fontSize 15, lineHeight 1.65, color ink */
+.wk-groups__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin: 0;
+}
+
+/* ── CTA — dark moss ─────────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto, background wk.bgDeep, color #ece4d0 */
+/* borderRadius 28, padding 40px 48px, grid 1.4fr 1fr, gap 40, alignItems center */
+.wk-cta {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #10580099;
+  color: #e8f5bd61;
+  border-radius: 28px;
+  padding: 40px 48px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* quote: wk.serif, italic, fontSize 22, lineHeight 1.4, color #ece4d0 */
+.wk-cta__quote {
+  font-family: "Satoshi", sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+  color: #ece4d0;
+}
+
+/* actions: flex, justifyContent flex-end */
+.wk-cta__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* button: padding 14px 26px, background #d6885f, color #1f2620, borderRadius 999 */
+/* fontWeight 500, fontSize 15 */
+.wk-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 999px;
+  padding: 14px 26px;
+  background: #ffc7ac;
+  color: #1f2620;
+  transition: opacity 200ms;
+}
+
+.wk-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Reveal animation ────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .wk-hero {
+    grid-template-columns: 1fr;
+  }
+  .wk-walk__row {
+    grid-template-columns: 1fr;
+  }
+  .wk-parks__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .wk-groups {
+    grid-template-columns: 1fr;
+  }
+  .wk-cta {
+    grid-template-columns: 1fr;
+  }
+  .wk-cta__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .wk-section {
+    padding: 72px 24px;
+  }
+  .wk-hero {
+    padding: 40px 28px;
+  }
+  .wk-parks__grid {
+    grid-template-columns: 1fr;
+  }
+  .wk-parks__header {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .wk-groups {
+    padding: 32px 28px;
+  }
+  .wk-cta {
+    padding: 32px 28px;
+  }
+}

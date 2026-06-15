@@ -1,0 +1,322 @@
+/* ── Nativo · Boarding page ──────────────────────────────────── */
+/* C · Card stack — BoardingStack                                  */
+/* Values taken verbatim from boarding.jsx                         */
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body: background bd.bg, color bd.ink, fontFamily bd.sans */
+body.bd-page {
+  background: #ebe6dc;
+  margin: 0;
+}
+
+/* nav text colours on light page */
+.site-nav__logo {
+  color: #2c2a25;
+}
+.site-nav__links a {
+  color: #2c2a25;
+}
+.site-nav__links a:hover {
+  color: rgba(44, 42, 37, 0.6);
+}
+
+/* ── Section: padding 96px 56px ─────────────────────────────── */
+.boarding {
+  padding: 96px 56px;
+}
+
+/* ── BdPlaceholder ───────────────────────────────────────────── */
+.bd-ph {
+  position: relative;
+  overflow: hidden;
+}
+
+/* stripe overlay: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 8px) */
+.bd-ph__stripe {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.05) 0 2px,
+    transparent 2px 8px
+  );
+  z-index: 1;
+}
+
+/* label pill: bottom 12, left 14, fontSize 10, letterSpacing 0.16em, uppercase */
+.bd-ph__label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  z-index: 2;
+  font-family: "Satoshi", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* shape="soft" → borderRadius 20px */
+.bd-ph--soft {
+  border-radius: 20px;
+}
+
+/* shape="arch" → borderRadius 999px 999px 16px 16px */
+.bd-ph--arch {
+  border-radius: 999px 999px 16px 16px;
+}
+
+/* tone gradients: linear-gradient(160deg, a 0%, b 60%, c 100%) */
+.bd-ph--sage {
+  background: linear-gradient(160deg, #cbd0bd 0%, #aeb89a 60%, #7a8a6e 100%);
+}
+.bd-ph--clay {
+  background: linear-gradient(160deg, #e3cdb6 0%, #cfae8e 60%, #b85c3c 100%);
+}
+.bd-ph--cream {
+  background: linear-gradient(160deg, #ece4d2 0%, #dccfb4 60%, #a89674 100%);
+}
+.bd-ph--moss {
+  background: linear-gradient(160deg, #a4b59a 0%, #7d9077 60%, #4d5e48 100%);
+}
+
+/* ── Hero card ───────────────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 32px, background bd.card, borderRadius 32 */
+/* padding 64px 56px, grid 1.2fr 1fr, gap 48, alignItems center   */
+.bd-hero {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+  border-radius: 32px;
+  padding: 64px 56px;
+  color: #2c2a25;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* eyebrow: fontSize 12, letterSpacing 0.22em, uppercase, color bd.sageDark, marginBottom 18 */
+.bd-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #56664c;
+  margin-bottom: 18px;
+}
+
+/* h2: bd.serif, fontSize 64, lineHeight 1.0, fontWeight 400, letterSpacing -0.02em */
+.bd-hero__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: clamp(44px, 5.5vw, 72px);
+  line-height: 1;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.001em;
+  color: #2c2a25;
+}
+
+.bd-hero__title em {
+  color: #6a0000;
+  font-style: italic;
+}
+
+/* p: fontSize 17, lineHeight 1.65, color bd.inkSoft, marginTop 22, marginBottom 0, maxWidth 520 */
+.bd-hero__lede {
+  margin-top: 22px;
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+/* Hero photo */
+.bd-hero__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 999px 999px 16px 16px;
+  display: block;
+}
+
+/* ── Personal note card ──────────────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 32px, background bd.card, borderRadius 28, padding 48px 56px */
+.bd-note {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+  padding: 48px 56px;
+}
+
+/* p: bd.serif, fontSize 30, lineHeight 1.35, letterSpacing -0.005em, maxWidth 900 */
+.bd-note__text {
+  font-family: "Satoshi", sans-serif;
+  font-size: 30px;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  max-width: 900px;
+  color: #2c2a25;
+}
+
+.bd-note__text em {
+  color: #6a1900;
+  font-style: italic;
+}
+
+/* ── What's included — 2×2 grid ─────────────────────────────── */
+/* maxWidth 1280, margin 0 auto 32px, grid 1fr 1fr, gap 20 */
+.bd-grid {
+  max-width: 1280px;
+  margin: 0 auto 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* card: background bd.card, borderRadius 24, padding 32px 32px */
+/* grid 120px 1fr, gap 28, alignItems center                      */
+.bd-include {
+  background: #f4efe5;
+  border-radius: 24px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Grid card photo */
+.bd-include__ph {
+  aspect-ratio: 1 / 1;
+}
+
+.bd-include__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+/* h4: bd.serif, fontSize 24, fontWeight 400, lineHeight 1.1, letterSpacing -0.01em */
+.bd-include__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #2c2a25;
+}
+
+/* p: fontSize 14.5, lineHeight 1.55, color bd.inkSoft, marginTop 10, marginBottom 0 */
+.bd-include__body {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* ── CTA card ────────────────────────────────────────────────── */
+/* background bd.clayPale (#e8c9b1), borderRadius 28, padding 40px 48px */
+/* grid 1.4fr 1fr, gap 40, alignItems center                      */
+.bd-cta {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 48px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* p: bd.serif, italic, fontSize 26, lineHeight 1.35, margin 0 */
+.bd-cta__quote {
+  font-family: "Satoshi", sans-serif;
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+  color: #2c2a25;
+}
+
+/* actions: flex, justifyContent flex-end, gap 12 */
+.bd-cta__actions {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+}
+
+/* ── Button ──────────────────────────────────────────────────── */
+/* padding 14px 26px, borderRadius 999, fontWeight 500, fontSize 15 */
+.bd-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 999px;
+  padding: 14px 26px;
+  transition: opacity 200ms;
+}
+.bd-btn:hover {
+  opacity: 0.85;
+}
+
+/* background bd.ink (#2c2a25), color bd.bg (#ebe6dc) */
+.bd-btn--dark {
+  background: #2c2a25;
+  color: #ebe6dc;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .bd-hero {
+    grid-template-columns: 1fr;
+  }
+  .bd-grid {
+    grid-template-columns: 1fr;
+  }
+  .bd-cta {
+    grid-template-columns: 1fr;
+  }
+  .bd-cta__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .boarding {
+    padding: 72px 24px;
+  }
+  .bd-hero {
+    padding: 40px 28px;
+  }
+  .bd-note {
+    padding: 32px 28px;
+  }
+  .bd-include {
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+  .bd-cta {
+    padding: 32px 28px;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boarding — Nativo LDN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Caveat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/boarding.css" />
+  </head>
+  <body class="bd-page">
+    <div id="nav-placeholder"></div>
+
+    <main>
+      <!-- C · Card stack — BoardingStack -->
+      <!-- section: background bd.bg (#ebe6dc), color bd.ink (#2c2a25), fontFamily bd.sans, padding 96px 56px -->
+      <section class="boarding">
+        <!-- Hero card -->
+        <!-- maxWidth 1280, margin 0 auto 32px, background bd.card (#f4efe5), borderRadius 32 -->
+        <!-- padding 64px 56px, grid 1.2fr 1fr, gap 48, alignItems center -->
+        <div class="bd-hero reveal">
+          <div class="bd-hero__text">
+            <!-- eyebrow: fontSize 12, letterSpacing 0.22em, uppercase, color bd.sageDark (#56664c), marginBottom 18 -->
+            <div class="bd-eyebrow">Service · Boarding</div>
+            <!-- h2: bd.serif, fontSize 64, lineHeight 1.0, fontWeight 400, letterSpacing -0.02em, color bd.ink -->
+            <h1 class="bd-hero__title">
+              A real home<br /><em> Just like yours.</em>
+            </h1>
+            <!-- p: fontSize 17, lineHeight 1.65, color bd.inkSoft (#5e5a50), marginTop 22, maxWidth 520 -->
+            <p class="bd-hero__lede">
+              When you're away, your dog stays in a real home in Fulham. Just a
+              home, a sofa, and steady company.
+            </p>
+          </div>
+          <img
+            src="images/boarding1.jpeg"
+            alt="Two dogs resting together on a sofa"
+            class="bd-hero__photo"
+          />
+        </div>
+
+        <!-- Personal note card -->
+        <!-- maxWidth 1280, margin 0 auto 32px, background bd.card (#f4efe5), borderRadius 28, padding 48px 56px -->
+        <div class="bd-note reveal">
+          <!-- p: bd.serif, fontSize 30, lineHeight 1.35, letterSpacing -0.005em, maxWidth 900 -->
+          <p class="bd-note__text">
+            I keep boarding <em>small and personal.</em> Most stays are two or
+            three dogs at a time, so your dog gets proper attention rather than
+            being one of a crowd - same routine, same walks, same patience.
+          </p>
+        </div>
+
+        <!-- What's included — 2×2 grid -->
+        <!-- maxWidth 1280, margin 0 auto 32px, grid 1fr 1fr, gap 20 -->
+        <div class="bd-grid">
+          <!-- Sleep setup -->
+          <div class="bd-include reveal" data-delay="0">
+            <!-- IMAGE: replace src with your image path -->
+            <img
+              src="/images/sleep.jpeg"
+              alt="Sleep setup"
+              class="bd-include__ph bd-include__img"
+            />
+            <div>
+              <div class="bd-include__tag">Sleep setup</div>
+              <h3 class="bd-include__title">Bed or crate, like home</h3>
+              <p class="bd-include__body">
+                Whether your dog sleeps best curled up in a bed or settled in
+                their crate, we'll set things up the way they're used to at
+                home.
+              </p>
+            </div>
+          </div>
+
+          <!-- Walks -->
+          <div class="bd-include reveal" data-delay="100">
+            <!-- IMAGE: replace src with your image path -->
+            <img
+              src="/images/walks.jpeg"
+              alt="Walks"
+              class="bd-include__ph bd-include__img"
+            />
+            <div>
+              <div class="bd-include__tag">Walks</div>
+              <h3 class="bd-include__title">Daily, on their routine</h3>
+              <p class="bd-include__body">
+                Daily walks tailored to your dog's energy and routine - short
+                loops or long park visits, whatever works for them.
+              </p>
+            </div>
+          </div>
+
+          <!-- Updates -->
+          <div class="bd-include reveal" data-delay="0">
+            <!-- IMAGE: replace src with your image path -->
+            <img
+              src="/images/update.jpeg"
+              alt="Updates"
+              class="bd-include__ph bd-include__img"
+            />
+            <div>
+              <h3 class="bd-include__title">Photos &amp; videos</h3>
+              <p class="bd-include__body">
+                Photo and video updates so you can see how they're settling in.
+              </p>
+            </div>
+          </div>
+
+          <!-- Logistics -->
+          <div class="bd-include reveal" data-delay="100">
+            <!-- IMAGE: replace src with your image path -->
+            <img
+              src="/images/pickup.jpeg"
+              alt="Logistics"
+              class="bd-include__ph bd-include__img"
+            />
+            <div>
+              <h3 class="bd-include__title">Free collection</h3>
+              <p class="bd-include__body body-text-sm">
+                Free collection and drop-off. One less thing to think about
+                before you travel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA card -->
+        <!-- background bd.clayPale (#e8c9b1), borderRadius 28, padding 40px 48px -->
+        <!-- grid 1.4fr 1fr, gap 40, alignItems center -->
+        <div class="bd-cta reveal">
+          <!-- p: bd.serif, italic, fontSize 26, lineHeight 1.35, margin 0 -->
+          <p class="bd-cta__quote">
+            Two or three dogs at a time. Book early - we fill up fast around
+            school holidays.
+          </p>
+          <!-- button: background bd.ink (#2c2a25), color bd.bg (#ebe6dc), borderRadius 999, padding 14px 26px, fontWeight 500, fontSize 15 -->
+          <div class="bd-cta__actions">
+            <a href="contact.html" class="bd-btn bd-btn--dark"
+              >Book a meet &amp; greet →</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img
+        src="images/footer.png"
+        alt=""
+        class="site-footer__img"
+        aria-hidden="true"
+      />
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const delay = e.target.dataset.delay
+                ? parseInt(e.target.dataset.delay)
+                : 0;
+              setTimeout(() => e.target.classList.add("visible"), delay);
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+    <script src="js/include-nav.js"></script>
+    <script>
+      window.addEventListener("navLoaded", function () {
+        const nav = document.querySelector(".site-nav");
+        if (nav) nav.classList.add("site-nav--scrolled");
+      });
+    </script>
+  </body>
+</html>

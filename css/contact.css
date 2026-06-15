@@ -1,0 +1,467 @@
+/* ── Nativo · Get in Touch — A · Editorial Split ─────────────── */
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.gt-page {
+  background: #ebe6dc;
+  margin: 0;
+}
+
+/* nav on light bg */
+.site-nav__logo {
+  color: #2c2a25;
+}
+.site-nav__links a {
+  color: #2c2a25;
+}
+.site-nav__links a:hover {
+  color: rgba(44, 42, 37, 0.6);
+}
+
+/* ── Section ──────────────────────────────────────────────────── */
+/* background gt.bg, padding 96px 0 */
+.gt-section {
+  padding: 96px 0;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────── */
+/* maxWidth 1180, margin 0 auto 72px, padding 0 56px */
+.gt-hero {
+  max-width: 1180px;
+  margin: 0 auto 72px;
+  padding: 0 56px;
+}
+
+/* eyebrow: fontSize 12, letterSpacing 0.22em, uppercase, color gt.sageDark, marginBottom 18 */
+.gt-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #56664c;
+  margin-bottom: 18px;
+}
+
+/* h1: gt.serif, fontSize 88, lineHeight 0.98, fontWeight 400, letterSpacing -0.02em, maxWidth 980 */
+.gt-title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 88px;
+  line-height: 0.98;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  max-width: 980px;
+  color: #2c2a25;
+}
+
+.gt-title em {
+  color: #6a1900;
+  font-style: italic;
+}
+
+/* lede: fontSize 19, lineHeight 1.55, color gt.inkSoft, marginTop 24, maxWidth 680 */
+.gt-lede {
+  margin-top: 24px;
+  margin-bottom: 0;
+  max-width: 680px;
+}
+
+/* ── Form + side rail ─────────────────────────────────────────── */
+/* maxWidth 1180, margin 0 auto 80px, padding 0 56px */
+/* grid 1.4fr 1fr, gap 56, alignItems flex-start */
+.gt-body {
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 0 56px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: flex-start;
+}
+
+/* ── Form ─────────────────────────────────────────────────────── */
+/* grid 1fr 1fr, gap 20 */
+.gt-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.gt-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.gt-field--full {
+  grid-column: 1 / -1;
+}
+
+/* label: fontSize 13, color gt.sageDark, letterSpacing 0.04em, marginBottom 8, fontWeight 500 */
+.gt-label {
+  display: block;
+  font-size: 13px;
+  color: #56664c;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.gt-optional {
+  color: #5e5a50;
+  font-weight: 500;
+  font-style: italic;
+  margin-left: 6px;
+}
+
+/* input/textarea/select: background #fff8ee, border gt.rule, borderRadius 12 */
+/* padding 14px 16px, fontSize 15, color gt.ink, outline none */
+/* transition border-color 0.15s, background 0.15s */
+.gt-input {
+  width: 100%;
+  background: #fff8ee;
+  border: 1px solid #cdc4b0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-family: "Satoshi", sans-serif;
+  font-size: 15px;
+  color: #2c2a25;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+  appearance: none;
+}
+
+.gt-input:focus {
+  border-color: #56664c;
+  background: #fffdf8;
+}
+
+.gt-input::placeholder {
+  color: #a09890;
+}
+
+.gt-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* select: custom chevron arrow */
+.gt-select-wrap {
+  position: relative;
+}
+
+.gt-select-wrap::after {
+  content: "";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2356664c' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  pointer-events: none;
+}
+
+.gt-select {
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+/* form footer: flex, space-between, alignItems center, marginTop 8 */
+.gt-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+/* note: fontSize 13, color gt.inkSoft, margin 0 */
+.gt-form-note {
+  font-size: 13px;
+  color: #5e5a50;
+  margin: 0;
+}
+
+/* button: padding 14px 28px, background gt.ink, color gt.bg, borderRadius 999 */
+/* fontWeight 500, fontSize 15, cursor pointer */
+.gt-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #2c2a25;
+  color: #ebe6dc;
+  border: none;
+  border-radius: 999px;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.gt-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Side rail ────────────────────────────────────────────────── */
+/* flex column, gap 14 */
+.gt-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* channel card: grid 40px 1fr auto, gap 16, alignItems center, borderRadius 20, padding 24px 26px */
+.gt-channel {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  border-radius: 20px;
+  padding: 24px 26px;
+  text-decoration: none;
+  transition: opacity 200ms;
+}
+
+.gt-channel:hover {
+  opacity: 0.88;
+}
+
+/* dark variant: background gt.bgDeep (#3d4a3a), color #ece4d0 */
+.gt-channel--dark {
+  background: #3d4a3a;
+  color: #ece4d0;
+}
+
+/* light variant: background gt.card (#f4efe5), color gt.ink */
+.gt-channel--light {
+  background: #f4efe5;
+  color: #2c2a25;
+}
+
+/* icon: 40×40, borderRadius 50%, display grid, placeItems center, fontWeight 700 */
+.gt-channel__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* WhatsApp: bg #25D366 */
+.gt-channel__icon--whatsapp {
+  background: #25d366;
+}
+
+/* Email: bg gt.clayPale, color gt.clay */
+.gt-channel__icon--email {
+  background: #e8c9b1;
+  color: #6a1900;
+}
+
+/* Instagram: gradient */
+.gt-channel__icon--instagram {
+  background: linear-gradient(135deg, #f9b16e, #c13584);
+  border-radius: 10px;
+}
+
+/* channel name: gt.serif, fontSize 22, lineHeight 1, marginBottom 4 */
+.gt-channel__name {
+  font-family: "Satoshi", sans-serif;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* sub: fontSize 12–13 */
+.gt-channel__sub {
+  font-size: 13px;
+  color: #5e5a50;
+}
+
+.gt-channel__sub--light {
+  font-size: 12px;
+  color: #d8c79b;
+  letter-spacing: 0.06em;
+}
+
+/* arrow */
+.gt-channel__arrow {
+  font-size: 18px;
+  color: #5e5a50;
+}
+
+.gt-channel--dark .gt-channel__arrow {
+  color: #ece4d0;
+}
+
+/* note: marginTop 12, padding 20px 24px, bg gt.clayPale, borderRadius 18 */
+/* gt.serif, italic, fontSize 16, lineHeight 1.45 */
+.gt-rail__note {
+  margin-top: 12px;
+  padding: 20px 24px;
+  background: #e8c9b1;
+  border-radius: 18px;
+  font-family: "Satoshi", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #2c2a25;
+}
+
+/* ── What happens next ────────────────────────────────────────── */
+/* maxWidth 1180, margin 0 auto, padding 40px 56px 0 */
+/* borderTop 1px solid gt.rule */
+.gt-steps {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 56px 0;
+  border-top: 1px solid #cdc4b0;
+}
+
+/* header: flex, space-between, alignItems baseline, marginBottom 32 */
+.gt-steps__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+/* h3: gt.serif, fontSize 40, fontWeight 400, letterSpacing -0.01em */
+.gt-steps__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 40px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #2c2a25;
+}
+
+.gt-steps__title em {
+  color: #6a1900;
+  font-style: italic;
+}
+
+/* label: fontSize 12, letterSpacing 0.18em, uppercase, color gt.sageDark */
+.gt-steps__label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #56664c;
+}
+
+/* grid: repeat(3, 1fr), gap 20 */
+.gt-steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* step card: background gt.card, borderRadius 20, padding 28px, height 100% */
+.gt-step {
+  background: #f4efe5;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+/* number: gt.serif, italic, fontSize 32, color gt.clay, lineHeight 0.9, marginBottom 18 */
+.gt-step__num {
+  font-family: "Satoshi", sans-serif;
+  font-style: italic;
+  font-size: 32px;
+  color: #6a1900;
+  line-height: 0.9;
+  margin-bottom: 18px;
+}
+
+/* title: gt.serif, fontSize 24, fontWeight 400, lineHeight 1.15, letterSpacing -0.01em */
+.gt-step__title {
+  font-family: "Satoshi", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #2c2a25;
+}
+
+/* body: fontSize 14.5, lineHeight 1.55, color gt.inkSoft, marginTop 10, marginBottom 0 */
+.gt-step__body {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--body-muted);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+/* ── Reveal animation ─────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .gt-title {
+    font-size: 60px;
+  }
+  .gt-body {
+    grid-template-columns: 1fr;
+  }
+  .gt-steps__grid {
+    grid-template-columns: 1fr;
+  }
+  .gt-steps__header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gt-section {
+    padding: 72px 0;
+  }
+  .gt-hero {
+    padding: 0 24px;
+    margin-bottom: 48px;
+  }
+  .gt-title {
+    font-size: 44px;
+  }
+  .gt-body {
+    padding: 0 24px;
+  }
+  .gt-form {
+    grid-template-columns: 1fr;
+  }
+  .gt-steps {
+    padding: 32px 24px 0;
+  }
+  .gt-form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Care — Nativo LDN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Caveat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/daycare.css" />
+  </head>
+  <body class="dc-page">
+    <!-- Day Care: A · Editorial split -->
+    <main>
+      <!-- Hero: headline + intro + image -->
+      <section class="dc-hero">
+        <div id="nav-placeholder"></div>
+        <div class="dc-hero__inner">
+          <div class="dc-hero__text">
+            <div class="dc-eyebrow reveal" data-delay="0">
+              Service · Day Care
+            </div>
+            <h1
+              class="dc-hero__title reveal dc-hero__title--anim"
+              data-delay="120"
+            >
+              A small group.<br /><em>A calm day.</em>
+            </h1>
+            <p class="dc-hero__lede reveal" data-delay="280">
+              For small to medium dogs only. We take just a handful each day so
+              the group stays calm, sociable and properly looked after.
+            </p>
+          </div>
+          <div class="dc-hero__img reveal" data-delay="180">
+            <img
+              src="images/daycare-1.jpeg"
+              alt="The pack · sofa hours"
+              class="dc-hero__photo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Four highlight cards -->
+      <section class="dc-highlights">
+        <div class="dc-highlights__grid">
+          <div class="dc-card reveal" data-delay="0">
+            <div class="dc-card__tag">Group size</div>
+            <h3 class="dc-card__title">Small to medium dogs only</h3>
+            <p class="dc-card__body">
+              We take just a handful each day so the group stays calm, sociable
+              and properly looked after.
+            </p>
+          </div>
+
+          <div class="dc-card reveal" data-delay="100">
+            <div class="dc-card__tag">Hours</div>
+            <h3 class="dc-card__title">Flexible drop-off</h3>
+            <p class="dc-card__body">
+              Drop-off and pick-up are flexible, Monday to Friday. Mornings
+              begin slowly with a gentle introduction.
+            </p>
+          </div>
+
+          <div class="dc-card reveal" data-delay="200">
+            <div class="dc-card__tag">Walks</div>
+            <h3 class="dc-card__title">Two walks a day</h3>
+            <p class="dc-card__body">
+              Off-lead at Eel Brook Common and South Park, in the dog exercise
+              areas, so they can run and socialise.
+            </p>
+          </div>
+
+          <div class="dc-card reveal" data-delay="300">
+            <div class="dc-card__tag">At home</div>
+            <h3 class="dc-card__title">Sofas &amp; beds</h3>
+            <p class="dc-card__body">
+              Dogs are welcome on the sofas, plenty of beds to choose from, and
+              a secure balcony for quick potty breaks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- A day with us: pull paragraph + two staggered photos -->
+      <section class="dc-day">
+        <div class="dc-day__inner">
+          <div class="dc-day__text reveal">
+            <div class="dc-eyebrow">A day with us</div>
+            <p class="dc-day__body">
+              Mornings begin slowly, with a gentle introduction to the space and
+              the other dogs. We split high-energy and low-energy pups into two
+              groups when it helps. Two walks a day at
+              <em>Eel Brook Common</em> or <em>South Park</em> so they can run
+              and socialise freely.
+            </p>
+          </div>
+          <div class="dc-day__photos reveal" data-delay="180">
+            <img
+              src="images/daycare-2.jpeg"
+              alt="Eel Brook Common"
+              class="dc-day__photo"
+            />
+            <img
+              src="images/daycare-3.jpeg"
+              alt="South Park"
+              class="dc-day__photo dc-day__photo--offset"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing strip -->
+      <section class="dc-closing">
+        <div class="dc-closing__inner">
+          <p class="dc-closing__quote reveal">
+            Your dog's safety and happiness are at the heart of everything we
+            do. They'll come home tired, loved, and already waiting to come
+            back.
+          </p>
+          <div class="dc-closing__cta reveal" data-delay="150">
+            <a href="contact.html" class="dc-btn dc-btn--primary"
+              >Book a meet &amp; greet →</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img
+        src="images/footer.png"
+        alt=""
+        class="site-footer__img"
+        aria-hidden="true"
+      />
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const delay = e.target.dataset.delay
+                ? parseInt(e.target.dataset.delay)
+                : 0;
+              setTimeout(() => e.target.classList.add("visible"), delay);
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+    <script src="js/include-nav.js"></script>
+    <script>
+      window.addEventListener("navLoaded", function () {
+        const nav = document.querySelector(".site-nav");
+        if (nav) nav.classList.add("site-nav--scrolled");
+      });
+    </script>
+  </body>
+</html>

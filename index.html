@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nativo London</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Caveat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <section class="hero" aria-label="Nativo LDN hero">
+      <div id="nav-placeholder"></div>
+      <img
+        class="hero__bg"
+        src="images/Hero-dog-1.png"
+        alt="A happy dog at Nativo LDN dog day care"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+      />
+      <div class="hero__title-wrap">
+        <h1 class="hero__title">NATIVO</h1>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-label">Scroll Down</span>
+        <svg
+          class="hero__scroll-arrow"
+          viewBox="0 0 24 40"
+          width="32"
+          height="52"
+        >
+          <rect
+            x="9"
+            y="2"
+            width="6"
+            height="12"
+            rx="3"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
+          <circle
+            class="hero__scroll-dot"
+            cx="12"
+            cy="7"
+            r="2"
+            fill="currentColor"
+          />
+          <path
+            d="M6 28 L12 35 L18 28"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about__intro">
+        <div class="about__manifesto reveal">
+          <p>
+            Nativo started with a simple idea: that every dog deserves
+            <em>care that feels like home.</em>
+            Welcoming space built around real connection between dogs at play
+            and the people who love them.
+          </p>
+        </div>
+        <div class="about__collage reveal" data-delay="180">
+          <div class="about__collage-tall">
+            <img src="images/gallery-1.jpg" alt="Dogs playing in the garden" />
+          </div>
+          <div class="about__collage-short">
+            <img src="images/gallery-2.jpeg" alt="Sofa nap" />
+          </div>
+          <div class="about__collage-tall about__collage-tall--offset">
+            <img src="images/gallery-3.jpg" alt="Walks in SW6" />
+          </div>
+          <div class="about__collage-short about__collage-short--last">
+            <img src="images/gallery-4.jpeg" alt="Greetings at the door" />
+          </div>
+        </div>
+      </div>
+
+      <div class="about__hero">
+        <h2 class="about__headline reveal" data-delay="120">
+          We're Ivo and Natalie,<br />
+          and somewhere between<br />
+          us is <em>Luna.</em>
+        </h2>
+      </div>
+
+      <div class="about__imagery reveal" data-delay="80">
+        <div class="about__img-luna">
+          <img src="images/gallery-7.jpeg" alt="Luna greeting guests" />
+        </div>
+        <div class="about__img-pack">
+          <img src="images/gallery-6.jpeg" alt="Ivo with the pack" />
+        </div>
+      </div>
+
+      <div class="hih">
+        <div class="hih__head reveal">
+          <h3 class="hih__title">How it all happened:</h3>
+        </div>
+
+        <div class="hih__body">
+          <!-- Weaving dashed thread connecting each pair -->
+          <svg
+            class="hih__thread"
+            viewBox="0 0 1100 1400"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M 220 130 Q 500 60, 760 240"
+              stroke="#56664c"
+              stroke-width="2"
+              stroke-dasharray="4 8"
+              fill="none"
+              opacity="0.5"
+            />
+            <path
+              d="M 760 240 Q 800 500, 340 540"
+              stroke="#56664c"
+              stroke-width="2"
+              stroke-dasharray="4 8"
+              fill="none"
+              opacity="0.5"
+            />
+            <path
+              d="M 340 540 Q 200 760, 720 880"
+              stroke="#56664c"
+              stroke-width="2"
+              stroke-dasharray="4 8"
+              fill="none"
+              opacity="0.5"
+            />
+            <path
+              d="M 720 880 Q 900 1040, 280 1180"
+              stroke="#56664c"
+              stroke-width="2"
+              stroke-dasharray="4 8"
+              fill="none"
+              opacity="0.5"
+            />
+          </svg>
+
+          <!-- Step 01 — note left (flex-start), photo right (flex-end) -->
+          <div class="hih__row">
+            <div class="hih__col hih__col--start">
+              <div class="reveal">
+                <div class="hih__note hih__note--paper" style="--rot: -2deg">
+                  <h4><b>Walks &amp; park visits 🌳</b></h4>
+                  <p>
+                    We've been dog owners and dog walkers for years, so dogs
+                    have always been part of daily life. Our journey started
+                    with park visits.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="hih__col hih__col--end">
+              <div class="reveal" data-delay="120">
+                <div
+                  class="hih__polaroid hih__polaroid--taped"
+                  style="--rot: 4deg"
+                >
+                  <div class="hih__photo hih__photo--sage">
+                    <img
+                      src="images/nataliepark.jpeg"
+                      alt="Mornings, leashes in hand"
+                    />
+                  </div>
+                  <div class="hih__caption">Battersea Park.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 02 — photo left (flex-end), note right (flex-start) -->
+          <div class="hih__row">
+            <div class="hih__col hih__col--end">
+              <div class="reveal">
+                <div class="hih__polaroid" style="--rot: -5deg">
+                  <div class="hih__photo hih__photo--clay">
+                    <img src="images/lunapuppy.jpeg" alt="Day one with Luna" />
+                  </div>
+                  <div class="hih__caption">Day one with Luna.</div>
+                </div>
+              </div>
+            </div>
+            <div class="hih__col hih__col--start">
+              <div class="reveal" data-delay="120">
+                <div class="hih__note hih__note--clay" style="--rot: 3deg">
+                  <h4><b>Then, a surprise 🐶</b></h4>
+                  <p>
+                    One day Ivo surprised Natalie with Luna — friendly,
+                    sociable, never happier than when she's making new friends.
+                    A textbook dachshund.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 03 — note left (flex-start), photo right (flex-end) -->
+          <div class="hih__row">
+            <div class="hih__col hih__col--start">
+              <div class="reveal">
+                <div class="hih__note hih__note--sage" style="--rot: -3deg">
+                  <h4><b>Park friends 🦮 → playdates </b></h4>
+                  <p>
+                    Park friendships became playdates. Playdates became regular
+                    sleepovers. Before long we were looking after other people's
+                    dogs as a little business.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="hih__col hih__col--end">
+              <div class="reveal" data-delay="120">
+                <div
+                  class="hih__polaroid hih__polaroid--taped"
+                  style="--rot: 5deg"
+                >
+                  <div class="hih__photo hih__photo--cream">
+                    <img
+                      src="images/lunawithraphi.jpeg"
+                      alt="First sleepover"
+                    />
+                    <span class="hih__photo-label">Sleepover</span>
+                  </div>
+                  <div class="hih__caption">First sleepover 💤</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hih__row">
+            <div class="hih__col hih__col--end">
+              <div class="reveal">
+                <div class="hih__polaroid" style="--rot: -3deg">
+                  <div class="hih__photo hih__photo--moss">
+                    <img src="images/lunagreet.jpeg" alt="Greeter on duty" />
+                  </div>
+                  <div class="hih__caption">Greeter on duty.</div>
+                </div>
+              </div>
+            </div>
+            <div class="hih__col hih__col--start">
+              <div class="reveal" data-delay="120">
+                <div class="hih__note hih__note--paper" style="--rot: 2deg">
+                  <h4><b>A small home in Fulham 🏠</b></h4>
+                  <p>
+                    Today we run a small, home based daycare. Ivo leads the day
+                    to day care, Natalie's hands-on alongside him, and Luna is
+                    still very much in charge of greeting every new guest at the
+                    door.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The three of us -->
+      <div class="about__team">
+        <div class="about__team-header reveal">
+          <h3 class="about__team-title">The three of us.</h3>
+        </div>
+        <div class="about__team-grid">
+          <div class="about__member reveal" data-delay="80">
+            <div class="about__member-img about__member-img--cream">
+              <img src="images/ivo.jpeg" alt="Ivo" />
+            </div>
+            <div class="about__member-name-row">
+              <h4>Ivo</h4>
+            </div>
+            <p class="body-text-sm">
+              Leads routines, walks and the long mid-morning loop.
+            </p>
+          </div>
+
+          <div class="about__member reveal" data-delay="200">
+            <div class="about__member-img about__member-img--clay">
+              <img src="images/natalie.jpeg" alt="Natalie" />
+            </div>
+            <div class="about__member-name-row">
+              <h4>Natalie</h4>
+            </div>
+            <p class="body-text-sm">
+              Hands-on alongside Ivo. Notices the small things first.
+            </p>
+          </div>
+
+          <div class="about__member reveal" data-delay="320">
+            <div class="about__member-img about__member-img--sage">
+              <img src="images/lunastudio.jpeg" alt="Luna" />
+            </div>
+            <div class="about__member-name-row">
+              <h4>Luna</h4>
+            </div>
+            <p class="body-text-sm">
+              In charge of greeting every new guest at the door.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="services">
+        <div class="services__head reveal">
+          <h2 class="services__title">What <em>we offer</em></h2>
+          <p class="body-text-sm">
+            Care that feels like home for small to medium dogs, all day or just
+            for a stretch of it.
+          </p>
+        </div>
+
+        <div class="services__grid">
+          <!-- Day Care -->
+          <a
+            href="daycare.html"
+            class="services__card services__card--link"
+            data-delay="0"
+          >
+            <div class="services__scene services__scene--sage">
+              <svg
+                viewBox="0 0 200 160"
+                width="100%"
+                height="100%"
+                aria-hidden="true"
+              >
+                <!-- sun -->
+                <circle cx="155" cy="32" r="14" fill="#b85c3c" />
+                <line
+                  x1="155"
+                  y1="10"
+                  x2="155"
+                  y2="4"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="169"
+                  y1="14"
+                  x2="173"
+                  y2="9"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="177"
+                  y1="28"
+                  x2="183"
+                  y2="26"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="177"
+                  y1="46"
+                  x2="183"
+                  y2="50"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="169"
+                  y1="58"
+                  x2="173"
+                  y2="63"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="141"
+                  y1="58"
+                  x2="137"
+                  y2="63"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="133"
+                  y1="46"
+                  x2="127"
+                  y2="50"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <line
+                  x1="133"
+                  y1="28"
+                  x2="127"
+                  y2="26"
+                  stroke="#b85c3c"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+                <!-- dog standing -->
+                <path
+                  d="M40 120 Q40 95 60 92 L100 90 Q118 88 122 78 L130 70 Q138 64 144 70 Q146 76 138 80 L138 92 Q138 100 130 102 L120 104 L122 130 L114 130 L112 110 L70 110 L70 130 L62 130 L60 112 Q42 110 40 120 Z"
+                  fill="#56664c"
+                />
+                <circle cx="142" cy="74" r="2" fill="#cfd6c4" />
+              </svg>
+            </div>
+            <div class="services__info">
+              <div>
+                <div class="services__name">Day Care</div>
+                <div class="services__tag">Sunup to sundown</div>
+              </div>
+              <div class="services__arrow-btn" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path
+                    d="M5 12 H18 M13 7 L18 12 L13 17"
+                    stroke="#b85c3c"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Boarding -->
+          <a
+            href="boarding.html"
+            class="services__card services__card--link"
+            data-delay="110"
+          >
+            <div class="services__scene services__scene--moss">
+              <svg
+                viewBox="0 0 200 160"
+                width="100%"
+                height="100%"
+                aria-hidden="true"
+              >
+                <!-- moon -->
+                <path
+                  d="M150 28 a14 14 0 1 0 12 22 a11 11 0 0 1 -12 -22 z"
+                  fill="#e6d8be"
+                />
+                <!-- stars -->
+                <circle cx="125" cy="22" r="1.5" fill="#e6d8be" opacity="0.7" />
+                <circle cx="172" cy="60" r="1.5" fill="#e6d8be" opacity="0.7" />
+                <!-- sleeping dog (curled) -->
+                <path
+                  d="M40 120 Q30 95 60 88 Q90 80 120 90 Q150 100 155 118 Q156 128 145 130 L55 130 Q40 130 40 120 Z"
+                  fill="#e3d7c2"
+                />
+                <circle cx="138" cy="108" r="2" fill="#e6d8be" />
+                <!-- zzz -->
+                <text
+                  x="60"
+                  y="74"
+                  font-family="serif"
+                  font-size="14"
+                  fill="#e6d8be"
+                  opacity="0.9"
+                >
+                  z
+                </text>
+                <text
+                  x="72"
+                  y="64"
+                  font-family="serif"
+                  font-size="11"
+                  fill="#e6d8be"
+                  opacity="0.8"
+                >
+                  z
+                </text>
+              </svg>
+            </div>
+            <div class="services__info">
+              <div>
+                <div class="services__name">Boarding</div>
+                <div class="services__tag">Overnight stays</div>
+              </div>
+              <div class="services__arrow-btn" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path
+                    d="M5 12 H18 M13 7 L18 12 L13 17"
+                    stroke="#b85c3c"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Walking -->
+          <a
+            href="walking.html"
+            class="services__card services__card--link"
+            data-delay="220"
+          >
+            <div class="services__scene services__scene--clay">
+              <svg
+                viewBox="0 0 200 160"
+                width="100%"
+                height="100%"
+                aria-hidden="true"
+              >
+                <!-- leash -->
+                <path
+                  d="M40 30 Q70 50 95 78"
+                  stroke="#e6d8be"
+                  stroke-width="2.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+                <!-- leash handle -->
+                <circle
+                  cx="38"
+                  cy="28"
+                  r="6"
+                  fill="none"
+                  stroke="#e6d8be"
+                  stroke-width="2.5"
+                />
+                <!-- dog mid-walk -->
+                <path
+                  d="M50 130 L52 108 Q52 96 64 94 L110 92 Q126 90 132 82 L142 74 Q148 70 154 76 Q156 82 148 86 L150 100 Q150 108 140 110 L132 112 L138 130 L130 130 L124 116 L98 116 L96 130 L88 130 L88 116 L70 116 L72 130 Z"
+                  fill="#b85c3c"
+                />
+                <circle cx="152" cy="80" r="2" fill="#ebe6dc" />
+                <!-- ground dashes -->
+                <line
+                  x1="20"
+                  y1="138"
+                  x2="180"
+                  y2="138"
+                  stroke="#b85c3c"
+                  stroke-width="1.5"
+                  stroke-dasharray="2 4"
+                  opacity="0.4"
+                />
+              </svg>
+            </div>
+            <div class="services__info">
+              <div>
+                <div class="services__name">Walking</div>
+                <div class="services__tag">Daily loops</div>
+              </div>
+              <div class="services__arrow-btn" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24">
+                  <path
+                    d="M5 12 H18 M13 7 L18 12 L13 17"
+                    stroke="#b85c3c"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why owners trust us — C · Photos featured -->
+    <section class="trust">
+      <div class="trust__inner">
+        <div class="reveal trust__header">
+          <div class="trust__eyebrow">Peace of mind</div>
+          <h2 class="trust__title">Why owners <em>trust us</em></h2>
+        </div>
+
+        <div class="trust__grid">
+          <!-- Featured: 02 · Photos & videos, every day -->
+          <div class="reveal">
+            <div class="trust__featured">
+              <div class="trust__photo-cluster">
+                <div class="trust__ph trust__ph__1 trust__ph--clay">
+                  <img src="images/trust1.png" alt="Daily update photo" />
+                  <span class="trust__ph-label">Today · 8:42am</span>
+                </div>
+                <div class="trust__photo-stack">
+                  <div class="trust__ph trust__ph--sage">
+                    <img src="images/trust2.png" alt="" />
+                  </div>
+                  <div class="trust__ph trust__ph--moss">
+                    <img src="images/trust3.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="trust__tag-badge">
+                <span class="trust__tag-dot"></span>
+                Daily updates
+              </div>
+              <h3 class="body-text">Photos &amp; videos, every day</h3>
+              <p class="body-text-sm">
+                You'll get photos and videos every single day - the thing owners
+                mention most. The walks, the naps, the new friends. You never
+                have to wonder how they're getting on.
+              </p>
+            </div>
+          </div>
+
+          <!-- Supporting: 01, 03, 04 -->
+          <div class="trust__list">
+            <div class="reveal trust__item">
+              <div>
+                <h3 class="body-text">A real home, never a kennel</h3>
+                <p class="body-text-sm">
+                  Your dog stays in our cozy home in Fulham, never a row of
+                  cages. We only ever host two or three at a time, so the day
+                  stays calm, not chaotic.
+                </p>
+              </div>
+            </div>
+            <div class="reveal trust__item" data-delay="100">
+              <div>
+                <h3 class="body-text">The same faces, every time</h3>
+                <p class="body-text-sm">
+                  The same small team every visit: Ivo, Natalie and Luna. No
+                  rotating staff, no strangers. The people who meet your dog on
+                  day one are the ones who look after them throughout.
+                </p>
+              </div>
+            </div>
+            <div class="reveal trust__item" data-delay="200">
+              <div>
+                <h3 class="body-text">A free meet &amp; greet first</h3>
+                <p class="body-text-sm">
+                  Come round for a free meet &amp; greet before you book a
+                  thing. No commitment, just a chance for you and your dog to
+                  see the home, meet us, and decide it feels right.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews: B · Side-by-side strip -->
+    <section class="reviews">
+      <div class="reviews__header">
+        <div class="reviews__header-left">
+          <div class="reviews__eyebrow">Reviews</div>
+          <h2 class="reviews__title">What the <em>hoomans</em> say.</h2>
+        </div>
+      </div>
+
+      <!-- 5 cards · carousel -->
+      <div class="reviews__strip">
+        <!-- 1 · Zein M. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            So sweet with Milo, kept him comfortable the entire time and sent me
+            lots of videos and pictures! He was very happy the entire time.
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Zein M.</div>
+              <div class="reviews__date">May 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 · Khristina S. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo and Natalie were amazing in looking after Bentley. They kept
+            sending daily update photos and he had the best time there. Highly
+            recommend!
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Khristina S.</div>
+              <div class="reviews__date">February 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 · Stella T. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo was absolutely amazing with Monty! Monty also absolutely loved
+            spending the day with their sweet Luna and can't wait to go back.
+            Super communicative and trustworthy.
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Stella T.</div>
+              <div class="reviews__date">January 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 · Jenilyn W. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo took such great care of our two pups. He treated them just like
+            they were family and included them in his daily routine and social
+            outings. I wouldn't hesitate to ask him to look after them again.
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Jenilyn W.</div>
+              <div class="reviews__date">January 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 · Manoella V. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path
+                  d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z"
+                  fill="#b85c3c"
+                  stroke="#b85c3c"
+                  stroke-width="1.4"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo accepted my last minute request for daycare and was such a great
+            fit! Very knowledgeable and patient with my dog. He sent photos
+            throughout the day and I could see how happy my little one was. Will
+            definitely book again!
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Manoella V.</div>
+              <div class="reviews__date">December 2025 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 · Huberta B. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo was great! He took very good care of Ella and kept me updated
+            throughout the period she was there! Thank you!
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Huberta B.</div>
+              <div class="reviews__date">June 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 · Lewis S. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo was a brilliant dog sitter from start to finish. Great comms
+            before, kept up to date during with detail and pictures, and a
+            flexible pickup. Thanks!!
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Lewis S.</div>
+              <div class="reviews__date">June 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 · Alexandra S. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo (and Natalie) were amazing and so easy to deal with! They
+            looked after our dog Teddy for 3 days whilst we were away on a
+            family holiday. We got photos everyday and they took Teddy
+            everywhere with them. Ivo even met my sister in law from the
+            station to collect Teddy. Teddy also got on so well with lovely
+            Luna. Wouldn't hesitate to recommend! Thank you!
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Alexandra S.</div>
+              <div class="reviews__date">June 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 · Elliott S. -->
+        <div class="reviews__card">
+          <div class="reviews__card-top">
+            <div class="reviews__card-stars" aria-label="5 stars">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2 L14.6 8.5 L21.5 9 L16.3 13.5 L18 20 L12 16.5 L6 20 L7.7 13.5 L2.5 9 L9.4 8.5 Z" fill="#b85c3c" stroke="#b85c3c" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            </div>
+            <span class="reviews__quotemark" aria-hidden="true">"</span>
+          </div>
+          <p class="body-text-sm">
+            Ivo was great, communicative, and prompt. Mila clearly had a fun
+            time by the photos he shared. I would recommend him to a friend.
+          </p>
+          <div class="reviews__meta">
+            <div>
+              <div class="reviews__name">Elliott S.</div>
+              <div class="reviews__date">May 2026 · Verified Booking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <img
+        src="images/footer.png"
+        alt=""
+        class="site-footer__img"
+        aria-hidden="true"
+      />
+    </footer>
+
+    <script>
+      // ── Reveal (IntersectionObserver) ─────────────────────────
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+
+      // ── Sticky nav after hero ──────────────────────────────────
+      const hero = document.querySelector(".hero");
+      function updateNav() {
+        const nav = document.querySelector(".site-nav");
+        if (!nav) return;
+        nav.classList.toggle(
+          "site-nav--scrolled",
+          window.scrollY > hero.offsetHeight - 80
+        );
+      }
+      window.addEventListener("scroll", updateNav, { passive: true });
+      window.addEventListener("navLoaded", updateNav);
+    </script>
+    <script src="js/include-nav.js"></script>
+    <script src="node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="node_modules/gsap/dist/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+  </body>
+</html>

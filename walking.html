@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walking — Nativo LDN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400&family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Caveat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/walking.css" />
+  </head>
+  <body class="wk-page">
+    <div id="nav-placeholder"></div>
+
+    <main>
+      <!-- D · Combined (all from C) — WalkingCombined -->
+      <section class="wk-section">
+        <!-- Hero card -->
+        <div class="wk-hero reveal">
+          <div class="wk-hero__text">
+            <div class="wk-eyebrow">Service · Walking</div>
+            <h1 class="wk-hero__title">
+              Daily walks your dog<br /><em>will look forward to.</em>
+            </h1>
+            <p class="wk-hero__lede">
+              Solo and small group walks around Fulham and Chelsea.
+            </p>
+          </div>
+          <div
+            class="wk-ph wk-ph--arch wk-hero__photo"
+            style="
+              background-image: url('images/walking.jpeg');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="wk-ph__stripe"></div>
+            <span class="wk-ph__label">Off-lead · South Park</span>
+          </div>
+        </div>
+
+        <!-- The walk itself + After every walk -->
+        <div class="wk-walk reveal">
+          <!-- Text + After every walk side by side -->
+          <div class="wk-walk__row">
+            <div class="wk-walk__text">
+              <div class="wk-tag">The walk itself</div>
+              <h3 class="wk-walk__title">
+                Pickup, an hour out, a clean dog home.
+              </h3>
+              <p class="wk-walk__body">
+                Every walk starts with pickup at your home and ends with a clean
+                dog back where they belong. In between, it's an hour at your local park: Eel Brook, Bishop's Park, South Park or
+                Brompton Cemetery, depending on what suits your dog best.
+              </p>
+              <p class="wk-walk__body">
+                Energetic dogs get the longer routes. Older or more nervous dogs
+                get the quieter ones. Everyone gets fresh water, a towel down if
+                it's wet and, of course, free treats for good behaviour.
+              </p>
+            </div>
+            <!-- After every walk card -->
+            <div class="wk-after">
+              <div class="wk-tag wk-tag--sm">After every walk</div>
+              <p class="body-text-sm">
+                You'll get a short message from us: photos, the route we took,
+                who your dog played with, and any notes worth flagging. It's how
+                I learn what your dog likes so the next walk's even better.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Where we walk -->
+        <div class="wk-parks">
+          <div class="wk-parks__header reveal">
+            <h3 class="wk-parks__title">Where we walk.</h3>
+            <div class="wk-parks__region">Fulham · Chelsea</div>
+          </div>
+          <div class="wk-parks__grid">
+            <div class="wk-park reveal" data-delay="0">
+              <div
+                class="wk-ph wk-ph--soft wk-park__photo"
+                style="
+                  background-image: url('images/eelbrook.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              >
+                <div class="wk-ph__stripe"></div>
+                <span class="wk-ph__label">Eel Brook Common</span>
+              </div>
+              <div class="wk-park__info">
+                <h4 class="wk-park__name">Eel Brook Common</h4>
+                <div class="wk-park__tag">Open &amp; sociable</div>
+              </div>
+            </div>
+
+            <div class="wk-park reveal" data-delay="90">
+              <div
+                class="wk-ph wk-ph--soft wk-park__photo"
+                style="
+                  background-image: url('images/brompton.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              >
+                <div class="wk-ph__stripe"></div>
+                <span class="wk-ph__label">Brompton Park</span>
+              </div>
+              <div class="wk-park__info">
+                <h4 class="wk-park__name">Brompton Park</h4>
+                <div class="wk-park__tag">Enclosed & sociable</div>
+              </div>
+            </div>
+
+            <div class="wk-park reveal" data-delay="180">
+              <div
+                class="wk-ph wk-ph--soft wk-park__photo"
+                style="
+                  background-image: url('images/southpark.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              >
+                <div class="wk-ph__stripe"></div>
+                <span class="wk-ph__label">South Park</span>
+              </div>
+              <div class="wk-park__info">
+                <h4 class="wk-park__name">South Park</h4>
+                <div class="wk-park__tag">Long laps</div>
+              </div>
+            </div>
+
+            <div class="wk-park reveal" data-delay="270">
+              <div
+                class="wk-ph wk-ph--soft wk-park__photo"
+                style="
+                  background-image: url('images/bcemetery.jpeg');
+                  background-size: cover;
+                  background-position: center;
+                "
+              >
+                <div class="wk-ph__stripe"></div>
+                <span class="wk-ph__label">Brompton Cemetery</span>
+              </div>
+              <div class="wk-park__info">
+                <h4 class="wk-park__name">Brompton Cemetery</h4>
+                <div class="wk-park__tag">Calm &amp; shaded</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Small groups. Never a pack -->
+        <div class="wk-groups reveal">
+          <div class="wk-groups__left">
+            <div class="wk-eyebrow wk-eyebrow--sm">
+              Small groups. Never a pack.
+            </div>
+            <h3 class="wk-groups__title">
+              Most walks are solo, or with
+              <em>one or two dogs</em> I already know are a good fit.
+            </h3>
+          </div>
+          <p class="wk-groups__body body-text-sm">
+            I don't run pack walks. If your dog is on lead only, anxious around
+            others or just doesn't enjoy strangers - that's fine, we'll keep
+            things one on one.
+          </p>
+        </div>
+
+        <!-- CTA — dark moss -->
+        <div class="wk-cta reveal">
+          <p class="wk-cta__quote">
+            Drop me a message with your dog's name, age, and roughly where you
+            live. I'll come round for a free meet and greet - from there,
+            one-off walks or a regular schedule.
+          </p>
+          <div class="wk-cta__actions">
+            <a href="contact.html" class="wk-btn">Book a meet &amp; greet →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img
+        src="images/footer.png"
+        alt=""
+        class="site-footer__img"
+        aria-hidden="true"
+      />
+    </footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              const delay = e.target.dataset.delay
+                ? parseInt(e.target.dataset.delay)
+                : 0;
+              setTimeout(() => e.target.classList.add("visible"), delay);
+              observer.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+      );
+      reveals.forEach((el) => observer.observe(el));
+    </script>
+    <script src="js/include-nav.js"></script>
+    <script>
+      window.addEventListener("navLoaded", function () {
+        const nav = document.querySelector(".site-nav");
+        if (nav) nav.classList.add("site-nav--scrolled");
+      });
+    </script>
+  </body>
+</html>
