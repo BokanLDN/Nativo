@@ -1013,11 +1013,18 @@ a.services__card--link:hover {
     gap: 0.75rem;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    align-items: center;
+  }
+  .site-nav__links li {
+    display: flex;
+    align-items: center;
+    line-height: 1;
   }
   .site-nav__links a {
     font-size: 11px;
     letter-spacing: 0.04em;
     white-space: nowrap;
+    line-height: 1;
   }
 }
 
