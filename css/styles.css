@@ -995,6 +995,9 @@ a.services__card--link:hover {
 }
 
 @media (max-width: 640px) {
+  .hero__title {
+    font-size: clamp(64px, 22vw, 140px);
+  }
   .about__intro {
     padding: 0 24px;
     margin-bottom: 64px;
