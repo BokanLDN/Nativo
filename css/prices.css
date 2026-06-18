@@ -1,0 +1,249 @@
+/* ── Nativo · Prices — version 01 · cream cards ──────────────── */
+
+:root {
+  --pr-bg: #ebe6dc;
+  --pr-card: #f4efe5;
+  --pr-ink: #2c2a25;
+  --pr-ink-soft: #5e5a50;
+  --pr-sage-dk: #56664c;
+  --pr-clay: #6a1900;
+  --pr-rule: #cdc4b0;
+  --pr-serif: "Satoshi", sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body.pr-page {
+  background: var(--pr-bg);
+  margin: 0;
+}
+
+/* nav text colours on light page */
+.site-nav__logo {
+  color: #2c2a25;
+}
+.site-nav__links a {
+  color: #2c2a25;
+}
+.site-nav__links a:hover {
+  color: rgba(44, 42, 37, 0.6);
+}
+
+/* ── Layout ──────────────────────────────────────────────────── */
+.pr-section {
+  padding: 96px 56px;
+}
+
+.pr-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.pr-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.pr-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pr-sage-dk);
+  margin-bottom: 18px;
+}
+.pr-title {
+  font-family: var(--pr-serif);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--pr-ink);
+}
+.pr-title em {
+  color: var(--pr-clay);
+  font-style: italic;
+}
+.pr-lede {
+  margin: 22px auto 0;
+  max-width: 560px;
+  color: var(--pr-ink-soft);
+}
+
+/* ── Cards grid ──────────────────────────────────────────────── */
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pr-card {
+  background: var(--pr-card);
+  border: 1px solid var(--pr-rule);
+  border-radius: 28px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pr-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px -24px rgba(44, 42, 37, 0.35);
+}
+
+/* featured card accent */
+.pr-card--featured {
+  border-color: var(--pr-sage-dk);
+}
+
+.pr-card__tag {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pr-sage-dk);
+  margin-bottom: 14px;
+}
+.pr-card__name {
+  font-family: var(--pr-serif);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--pr-ink);
+}
+
+.pr-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 22px 0 4px;
+}
+.pr-card__amount {
+  font-family: var(--pr-serif);
+  font-size: 44px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--pr-ink);
+}
+.pr-card__unit {
+  font-size: 15px;
+  color: var(--pr-ink-soft);
+}
+
+.pr-card__note {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pr-ink-soft);
+  margin: 0 0 24px;
+}
+
+.pr-card__list {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  border-top: 1px solid var(--pr-rule);
+}
+.pr-card__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--pr-ink);
+  border-bottom: 1px solid var(--pr-rule);
+}
+.pr-card__check {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  color: var(--pr-sage-dk);
+}
+
+.pr-card__cta {
+  margin-top: auto;
+}
+
+/* ── Button ──────────────────────────────────────────────────── */
+.pr-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--pr-serif);
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 999px;
+  padding: 14px 26px;
+  border: 1px solid transparent;
+  transition: opacity 200ms;
+}
+.pr-btn:hover {
+  opacity: 0.85;
+}
+.pr-btn--primary {
+  background: var(--pr-sage-dk);
+  color: var(--pr-bg);
+}
+.pr-btn--outline {
+  background: transparent;
+  color: var(--pr-ink);
+  border-color: var(--pr-ink);
+}
+
+/* ── Footnote ────────────────────────────────────────────────── */
+.pr-footnote {
+  text-align: center;
+  margin-top: 48px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pr-ink-soft);
+}
+.pr-footnote a {
+  color: var(--pr-clay);
+}
+
+/* ── Reveal animation ────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 960px) {
+  .pr-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  .pr-section {
+    padding: 72px 24px;
+  }
+  .pr-card {
+    padding: 32px 28px;
+  }
+}

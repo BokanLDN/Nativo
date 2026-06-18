@@ -353,7 +353,9 @@ body.wk-page {
 /* actions: flex, justifyContent flex-end */
 .wk-cta__actions {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 /* button: padding 14px 26px, background #d6885f, color #1f2620, borderRadius 999 */
@@ -368,11 +370,18 @@ body.wk-page {
   padding: 14px 26px;
   background: #ffc7ac;
   color: #1f2620;
+  border: 1px solid transparent;
   transition: opacity 200ms;
 }
 
 .wk-btn:hover {
-  opacity: 0.85f;
+  opacity: 0.85;
+}
+
+.wk-btn--outline {
+  background: transparent;
+  color: #1f2620;
+  border-color: #1f2620;
 }
 
 /* ── Reveal animation ────────────────────────────────────────── */

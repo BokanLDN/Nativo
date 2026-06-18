@@ -259,7 +259,8 @@ body.bd-page {
 /* actions: flex, justifyContent flex-end, gap 12 */
 .bd-cta__actions {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
@@ -273,6 +274,7 @@ body.bd-page {
   font-size: 18px;
   border-radius: 999px;
   padding: 14px 26px;
+  border: 1px solid transparent;
   transition: opacity 200ms;
 }
 .bd-btn:hover {
@@ -283,6 +285,11 @@ body.bd-page {
 .bd-btn--dark {
   background: #2c2a25;
   color: #ebe6dc;
+}
+.bd-btn--outline {
+  background: transparent;
+  color: #2c2a25;
+  border-color: #2c2a25;
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */

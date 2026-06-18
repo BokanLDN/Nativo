@@ -1009,6 +1009,11 @@ a.services__card--link:hover {
   .site-nav__home {
     display: flex;
   }
+  .site-nav__home svg,
+  .site-nav__instagram svg {
+    width: 17px;
+    height: 17px;
+  }
   .site-nav__links {
     gap: 0.75rem;
     flex-wrap: nowrap;
