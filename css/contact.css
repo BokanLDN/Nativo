@@ -214,6 +214,54 @@ body.gt-page {
   opacity: 0.85;
 }
 
+/* ── Honeypot (spam trap) — visually hidden, not display:none ──── */
+.gt-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Form status / error messages ─────────────────────────────── */
+.gt-form-status,
+.gt-form-error {
+  padding: 32px 36px;
+  border-radius: 20px;
+  background: #f3eee2;
+  border: 1px solid rgba(86, 102, 76, 0.2);
+}
+
+.gt-form-error {
+  background: #f6ece6;
+  border-color: rgba(106, 25, 0, 0.2);
+}
+
+.gt-form-status__heading {
+  font-family: "Satoshi", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #6a1900;
+  margin: 0 0 12px;
+}
+
+.gt-form-status__text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #5e5a50;
+  margin: 0;
+}
+
+.gt-form-status__text a {
+  color: #6a1900;
+  text-decoration: underline;
+}
+
 /* ── Side rail ────────────────────────────────────────────────── */
 /* flex column, gap 14 */
 .gt-rail {

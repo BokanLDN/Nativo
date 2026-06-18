@@ -34,33 +34,82 @@
         <div class="gt-body">
           <!-- Form -->
           <div class="gt-form-wrap reveal">
-            <form class="gt-form" action="#" method="post">
+            <form
+              class="gt-form"
+              name="contact"
+              method="post"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <!-- Netlify form name (required for AJAX submissions) -->
+              <input type="hidden" name="form-name" value="contact" />
+              <!-- Subject line for the notification email -->
+              <input
+                type="hidden"
+                name="subject"
+                value="New Nativo enquiry from %{formName}"
+              />
+              <!-- Honeypot field — hidden from real users, catches bots -->
+              <p class="gt-hidden" aria-hidden="true">
+                <label
+                  >Don't fill this out if you're human:
+                  <input name="bot-field" tabindex="-1" autocomplete="off"
+                /></label>
+              </p>
               <div class="gt-field">
-                <label class="gt-label">Your name</label>
-                <input class="gt-input" type="text" placeholder="e.g. Sarah" />
-              </div>
-              <div class="gt-field">
-                <label class="gt-label">Email</label>
+                <label class="gt-label" for="gt-name">Your name</label>
                 <input
                   class="gt-input"
+                  id="gt-name"
+                  name="name"
+                  type="text"
+                  placeholder="e.g. Sarah"
+                />
+              </div>
+              <div class="gt-field">
+                <label class="gt-label" for="gt-email">Email</label>
+                <input
+                  class="gt-input"
+                  id="gt-email"
+                  name="email"
                   type="email"
                   placeholder="you@example.com"
                 />
               </div>
               <div class="gt-field">
-                <label class="gt-label"
+                <label class="gt-label" for="gt-phone"
                   >Phone <span class="gt-optional">· optional</span></label
                 >
-                <input class="gt-input" type="tel" placeholder="07…" />
+                <input
+                  class="gt-input"
+                  id="gt-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="07…"
+                />
               </div>
               <div class="gt-field">
-                <label class="gt-label">Your dog's name</label>
-                <input class="gt-input" type="text" placeholder="e.g. Pip" />
+                <label class="gt-label" for="gt-dog-name"
+                  >Your dog's name</label
+                >
+                <input
+                  class="gt-input"
+                  id="gt-dog-name"
+                  name="dog-name"
+                  type="text"
+                  placeholder="e.g. Pip"
+                />
               </div>
               <div class="gt-field">
-                <label class="gt-label">What can I help with?</label>
+                <label class="gt-label" for="gt-service"
+                  >What can I help with?</label
+                >
                 <div class="gt-select-wrap">
-                  <select class="gt-input gt-select">
+                  <select
+                    class="gt-input gt-select"
+                    id="gt-service"
+                    name="service"
+                  >
                     <option>Dog Walking</option>
                     <option>Drop-in Visits</option>
                     <option>Boarding Enquiry</option>
@@ -69,13 +118,24 @@
                 </div>
               </div>
               <div class="gt-field">
-                <label class="gt-label">Preferred start date</label>
-                <input class="gt-input" type="date" />
+                <label class="gt-label" for="gt-start-date"
+                  >Preferred start date</label
+                >
+                <input
+                  class="gt-input"
+                  id="gt-start-date"
+                  name="start-date"
+                  type="date"
+                />
               </div>
               <div class="gt-field gt-field--full">
-                <label class="gt-label">Tell me a little about your pup</label>
+                <label class="gt-label" for="gt-message"
+                  >Tell me a little about your pup</label
+                >
                 <textarea
                   class="gt-input gt-textarea"
+                  id="gt-message"
+                  name="message"
                   rows="5"
                   placeholder="Breed, age, anything I should know — favourite toy counts."
                 ></textarea>
@@ -87,6 +147,22 @@
                 </button>
               </div>
             </form>
+            <!-- Inline confirmation / error messages (hidden by default) -->
+            <div class="gt-form-status" hidden>
+              <p class="gt-form-status__heading">Thank you — message sent.</p>
+              <p class="gt-form-status__text">
+                I read every message and reply within 24 hours, usually with a
+                few questions about your pup. Talk soon.
+              </p>
+            </div>
+            <div class="gt-form-error" hidden>
+              <p class="gt-form-status__text">
+                Something went wrong sending your message. Please email me
+                directly at
+                <a href="mailto:hello@nativo.dog">hello@nativo.dog</a> and I'll
+                get right back to you.
+              </p>
+            </div>
           </div>
 
           <!-- Side rail -->
@@ -174,6 +250,39 @@
       />
     </footer>
 
+    <script>
+      // ── Netlify Forms AJAX submission ──────────────────────────
+      // Submit without a page reload, then swap the form for an inline
+      // confirmation message (or show a fallback on error).
+      (function () {
+        const form = document.querySelector(".gt-form");
+        if (!form) return;
+        const wrap = form.closest(".gt-form-wrap");
+        const successEl = wrap.querySelector(".gt-form-status");
+        const errorEl = wrap.querySelector(".gt-form-error");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (errorEl) errorEl.hidden = true;
+
+          const data = new URLSearchParams(new FormData(form)).toString();
+
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: data,
+          })
+            .then(function (response) {
+              if (!response.ok) throw new Error("Submission failed");
+              form.hidden = true;
+              if (successEl) successEl.hidden = false;
+            })
+            .catch(function () {
+              if (errorEl) errorEl.hidden = false;
+            });
+        });
+      })();
+    </script>
     <script>
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
